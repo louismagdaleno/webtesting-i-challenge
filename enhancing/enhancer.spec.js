@@ -10,3 +10,9 @@ describe('repair', () => {
         expect(expected).toBe(actual);
     });
 });
+
+describe('succeed', () => {
+    it('exists', () => {
+        expect(enhancer.succeed).toBeDefined();
+    });
+});
