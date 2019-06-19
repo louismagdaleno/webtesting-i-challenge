@@ -40,5 +40,13 @@ describe('fail', () => {
         let actual = enhancer.fail(item).durability;
 
         expect(actual).toBe(expected);
-    })
+    });
+
+    it('decreases durability by 10 when enhancement >=  15', () => {
+        let item = {enhancement: 20, durability : 15};
+        let expected = 5;
+        let actual = enhancer.fail(item).durability;
+
+        expect(actual).toBe(expected);
+    });
 })
