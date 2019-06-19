@@ -15,4 +15,12 @@ describe('succeed', () => {
     it('exists', () => {
         expect(enhancer.succeed).toBeDefined();
     });
+
+    it('returns a valid item with increased enhancement', () => {
+        let item = { enhancement : 19 };
+        let expected = 20;
+        let actual = enhancer.succeed(item).enhancement;
+
+        expect(actual).toBe(expected);
+    });
 });
